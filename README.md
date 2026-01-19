@@ -7,14 +7,6 @@ El objetivo ha sido levantar un entorno completo con PHP, MySQL, phpMyAdmin y Ng
 Para ello, he seguido la guía proporcionada en el siguiente enlace:
 https://punkymo.gitbook.io/miwiki/virtualizacion/contenedores/docker/docker-compose/importar-sitio-web-en-docker
 
-Introducción
-
-En este trabajo he realizado el despliegue de una aplicación web utilizando Docker y Docker Compose.
-El objetivo ha sido levantar un entorno completo con PHP, MySQL, phpMyAdmin y Nginx, y comprobar que tanto la base de datos como la página web funcionan correctamente dentro de contenedores.
-
-Para ello, he seguido la guía proporcionada en el siguiente enlace:
-https://punkymo.gitbook.io/miwiki/virtualizacion/contenedores/docker/docker-compose/importar-sitio-web-en-docker
-
 Configuración del entorno
 <img width="1277" height="855" alt="1" src="https://github.com/user-attachments/assets/c6b68b1f-922c-4dbb-90c6-0302b1b9b20e" />
 
