@@ -8,7 +8,10 @@ Para ello, he seguido la guía proporcionada en el siguiente enlace:
 https://punkymo.gitbook.io/miwiki/virtualizacion/contenedores/docker/docker-compose/importar-sitio-web-en-docker
 
 Configuración del entorno
+
+
 <img width="1277" height="855" alt="1" src="https://github.com/user-attachments/assets/c6b68b1f-922c-4dbb-90c6-0302b1b9b20e" />
+
 
 Aquí enseño la modificación del archivo docker-compose.yml.
 En este archivo se definen todos los servicios que se iba a usar:
@@ -24,7 +27,10 @@ Gracias a este archivo, todos los servicios se levantan juntos con un solo coman
 
 
 Modificación del archivo conexion.php
+
+
 <img width="646" height="487" alt="2" src="https://github.com/user-attachments/assets/3211aa62-15f9-474e-bc12-3b52af642ca0" />
+
 
 Aquí muestro el archivo conexion.php, que es el encargado de realizar la conexión entre la página web y la base de datos.
 El cambio más importante que realice es sustituir localhost por db en el nombre del servidor. Esto se debe a que, cuando se trabaja con Docker, cada servicio se ejecuta dentro de su propio contenedor. En este caso, el servidor web y la base de datos no están en el mismo contenedor.
@@ -34,7 +40,10 @@ Además, se añade el nombre de la base de datos s21sec, que es la base de datos
 Gracias a estos cambios, la conexión con la base de datos funciona correctamente y la página web se carga sin errores en el navegador.
 
 Creación del archivo Dockerfile
+
+
 <img width="1276" height="854" alt="3" src="https://github.com/user-attachments/assets/584f0ac5-1d6c-40f9-85fa-2ad2d74bebeb" />
+
 
 Aquí se muestra la creación del archivo Dockerfile, que utilizo para configurar el contenedor de PHP.
 La línea FROM php:8.2-fpm indica que el contenedor va a utilizar PHP en la versión 8.2, que es la encargada de ejecutar el código de la página web.
@@ -42,20 +51,29 @@ La línea RUN docker-php-ext-install mysqli pdo pdo_mysql sirve para instalar la
 Sin estas extensiones, la aplicación no podría conectarse a la base de datos y la página web no funcionaría correctamente.
 
 Uso del comando docker compose up -d --build
+
+
 <img width="602" height="27" alt="4" src="https://github.com/user-attachments/assets/0e414cf5-0cdc-436c-8abe-704f25db7064" />
+
 
 Aquí ejecuto el comando docker compose up -d --build, que es el encargado de poner en marcha todo el proyecto.
 Este comando construye las imágenes necesarias, crea los contenedores definidos en el archivo docker-compose.yml y los inicia automáticamente. Además, gracias a la opción -d, los contenedores se ejecutan en segundo plano, permitiendo seguir usando la terminal sin que se bloquee.
 Este es el comando principal para arrancar la aplicación web y todos sus servicios al mismo tiempo.
 
 Base de datos funcionando en Docker
+
+
 <img width="1280" height="854" alt="5" src="https://github.com/user-attachments/assets/a3f51c69-9e2e-49bc-98b0-f4a06366e083" />
+
 
 Aquí enseño que la base de datos ya está creada y funcionando correctamente dentro del contenedor de MySQL. A través de phpMyAdmin se comprueba que la base de datos s21sec está activa y que contiene todas sus tablas.
 Esto confirma que el contenedor de MySQL se ha iniciado correctamente y que la conexión entre phpMyAdmin y la base de datos funciona sin errores.
 
 Página web funcionando correctamente
+
+
 <img width="1281" height="854" alt="6" src="https://github.com/user-attachments/assets/ae1a22ca-8470-47ea-b5a0-74ec19a1063b" />
+
 
 En esta imagen se muestra que la página web del proyecto se abre correctamente desde el navegador. Esto indica que el servidor web y PHP están funcionando bien dentro de los contenedores.
 Además, demuestra que la aplicación puede acceder a la base de datos y cargar la información sin problemas, por lo que todo el entorno Docker está correctamente configurado.
