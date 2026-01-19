@@ -67,20 +67,24 @@ Dentro de un contenedor se incluye todo lo necesario para que la aplicación fun
 La principal idea de Docker es que una aplicación funcione igual en cualquier ordenador, independientemente del sistema operativo o de lo que tenga instalado el usuario. Gracias a esto, se evitan muchos errores.
 
 Diferencias entre contenedores Docker y LXC
+
 Docker y LXC son dos tecnologías parecidas, pero se usan con objetivos distintos.
 LXC está más pensado para crear sistemas completos, parecidos a máquinas virtuales ligeras. En cambio, Docker está pensado para ejecutar aplicaciones concretas de forma sencilla.
 Docker es más fácil de usar, tiene más herramientas y es más popular actualmente. Además, Docker se centra más en el despliegue rápido de aplicaciones, mientras que LXC se usa más para administrar sistemas.
 
 Diferencia entre una imagen y un contenedor en Docker
+
 Una imagen es como una plantilla o un molde. Contiene todo lo necesario para crear un contenedor, pero no se ejecuta por sí sola.
 Un contenedor es la imagen en funcionamiento. Es decir, cuando se ejecuta una imagen, se crea un contenedor que ya está activo y funcionando.
 
 ¿Qué pasa con los datos cuando se elimina un contenedor?
+
 Cuando un contenedor se elimina, todos los datos que hay dentro se pierden, ya que el contenedor es temporal.
 Para evitar esto, Docker permite usar volúmenes, que son carpetas compartidas entre el contenedor y el sistema. De esta forma, aunque el contenedor se borre, los datos se mantienen.
 Por eso, para bases de datos siempre es recomendable usar volúmenes.
 
 Ventajas de utilizar Docker
+
 Docker tiene muchas ventajas, entre las más importantes:
 - Permite ejecutar aplicaciones de forma rápida.
 - Ahorra tiempo en configuraciones.
@@ -90,6 +94,7 @@ Docker tiene muchas ventajas, entre las más importantes:
 - Permite levantar varios servicios a la vez con Docker Compose.
   
 ¿Qué tipo de aplicaciones se pueden desplegar con Docker?
+
 Con Docker se pueden desplegar muchos tipos de aplicaciones, como por ejemplo:
 - Páginas web
 - Servidores web
@@ -101,6 +106,7 @@ Con Docker se pueden desplegar muchos tipos de aplicaciones, como por ejemplo:
 Docker es muy flexible y se adapta a muchos proyectos diferentes.
 
 Otros tipos de contenedores además de Docker
+
 Además de Docker, existen otros contenedores, como:
 - LXC: contenedores más parecidos a sistemas completos
 - Podman: similar a Docker, pero sin demonio central.
@@ -108,6 +114,7 @@ Además de Docker, existen otros contenedores, como:
 - CRI-O: usado junto con Kubernetes.
   
 Guía de usuario: despliegue de una aplicación web con contenedores
+
 1. Preparar el proyecto web en una carpeta.
 2. Crear el archivo docker-compose.yml con los servicios necesarios.
 3. Crear el Dockerfile para configurar PHP.
